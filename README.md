@@ -1,6 +1,6 @@
 # Morse Code Translator
 
-This was created during a challenge set on the _nology coarse to create a fully functioning morse code translator within a given time limit. This project took roughly 3 hours to finish.
+This was created during a challenge set on the _nology course, which was to create a fully functioning morse code translator within a given time limit. The project took roughly 3 hours to complete.
 
 ## How it was made
 
