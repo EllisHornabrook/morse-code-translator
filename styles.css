@@ -11,52 +11,57 @@
 }
 
 body {
-  border: 10px dotted darkgrey;
-  margin: 5% 20%;
-  border-radius: 10px;
+  width: 100%;
+  height: 100vh;
 }
 body img {
   position: absolute;
   z-index: -1;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   left: 0;
   top: 0;
 }
-
-header {
-  padding-bottom: 10px;
-  background-color: ivory;
+body header {
+  height: 7%;
 }
-header h1 {
+body header h1 {
   text-align: center;
   text-decoration: underline;
   font-size: 50px;
   background-color: orangered;
 }
-
-main {
+body main {
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main div {
+  width: 65%;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: ivory;
+  border: 10px dotted black;
+  border-radius: 10px;
 }
-main textarea {
+body main div textarea {
   font-size: 30;
-  width: 70%;
-  height: 260px;
+  width: 95%;
+  height: 30vh;
   padding: 20px;
   margin: 5px;
   border: black 3px solid;
   border-radius: 50px;
   outline: none;
 }
-main #input-two {
+body main div #input-two {
   background-color: rgba(255, 127, 80, 0.76);
   font-size: 22px;
   font-weight: bold;
 }
-main button {
+body main div button {
   margin: 5px 0;
   height: 50px;
   width: 300px;
@@ -69,14 +74,42 @@ main button {
   cursor: pointer;
   outline: none;
 }
-main button:hover {
+body main div button:hover {
   background-color: orangered;
   color: white;
 }
-
-footer {
-  padding-top: 35px;
+body footer {
+  display: flex;
+  align-items: center;
+  height: 3%;
+  position: fixed;
+  bottom: 0;
   width: 100%;
   background-color: ivory;
-  height: auto;
+  padding-left: 5px;
+}
+
+@media only screen and (max-width: 530px) {
+  body img {
+    width: 100%;
+  }
+  body header h1 {
+    font-size: 30px;
+  }
+  body main div {
+    border: 5px dotted black;
+  }
+  body main div textarea {
+    font-size: 18px;
+  }
+  body main div #input-two {
+    font-size: 10px;
+  }
+  body main div button {
+    margin: 3px 0;
+    height: 40px;
+    width: 200px;
+    font-size: 18px;
+    border: black 2px solid;
+  }
 }

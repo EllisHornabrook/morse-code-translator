@@ -1,6 +1,6 @@
 const inputOne = document.querySelector('#input-one');
 const inputTwo = document.querySelector('#input-two');
-const translateButton = document.querySelector('#button')
+const translateButton = document.querySelector('#button');
 
 const code = {
     a: ". _",
@@ -39,15 +39,12 @@ const code = {
     8: "_ _ _ . .",
     9: "_ _ _ _ .",
     0: "_ _ _ _ _",
-}
+};
 
-translateButton.addEventListener("click", (english) => {
-    english = inputOne.value;
-    english = english.toLowerCase();
-    english = english.split("");
-    for (i = 0; i < english.length; i++) {
-      english[i] = code[english[i]];
-    }
-    english = english.join(" / ");
-    inputTwo.value = english;
-  });
+translateButton.addEventListener("click", () => {
+    characters = inputOne.value.toLowerCase().split("");
+    for (i = 0; i < characters.length; i++) {
+      characters[i] = code[characters[i]];
+    };
+    inputTwo.value = characters.join(" / ");
+});

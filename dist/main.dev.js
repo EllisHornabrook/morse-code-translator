@@ -41,15 +41,13 @@ var code = {
   9: "_ _ _ _ .",
   0: "_ _ _ _ _"
 };
-translateButton.addEventListener("click", function (english) {
-  english = inputOne.value;
-  english = english.toLowerCase();
-  english = english.split("");
+translateButton.addEventListener("click", function () {
+  characters = inputOne.value.toLowerCase().split("");
 
-  for (i = 0; i < english.length; i++) {
-    english[i] = code[english[i]];
+  for (i = 0; i < characters.length; i++) {
+    characters[i] = code[characters[i]];
   }
 
-  english = english.join(" / ");
-  inputTwo.value = english;
+  ;
+  inputTwo.value = characters.join(" / ");
 });
